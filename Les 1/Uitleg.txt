@@ -1,0 +1,4 @@
+Les 1 - Uitleg 
+
+
+Het zorgt ervoor dat Git geen bestanden met bv gevoelige info publiek uploaden zoals wachtwoorden of geheime dingen.
