@@ -1,0 +1,9 @@
+Les 5 - Create: game toevoegen
+
+
+
+
+Je hebt een route nodig omdat als je geen route hebt weet laravel niet wat er moet gebeuren als je naar een andere URL gaat. Hij kan de goede functie dus niet koppelen aan de url en dan kan je bjvoorbeeld niet op add game drukken.
+
+
+
