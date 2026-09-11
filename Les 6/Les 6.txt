@@ -1,0 +1,9 @@
+Les 6 - Update: Game bewerken
+
+
+
+
+Bij het veranderen van een spel gaat het in de volgende stappen.
+
+
+Eerst ga je naar de URL, dan kijkt de router welke functies etc die moet gebruiken voor die URL, daarna stuurt die router het naar de controller, dan zoekt die het via de database welke ID het is en bij de view kan je dan  zien dat je naar de edit pagina gestuurd wordt waar alle al bestaande gegevens zijn van die ID, dan als je het aanpast en op update drukt slaat alles op en, dan gaat die weer naar de update() functie en veranderd de database ook en ga je terug naar de tabel met alle games.
