@@ -1,0 +1,11 @@
+Les 2 - Model View Controller en Router
+
+
+
+Model - De model zorgt ervoor dat bv SQL codes geregelt worden (en meer).
+
+View - De view is alles wat je ziet waneer je bijvoorbeeld de website opent, als bezoeker.
+
+Controller - De controller kijkt naar wat er gevraagt wordt (de request), zorgt ervoor dat die leesbaar voor de model is en stuurt die dan op naar de model.
+
+Router - De router kiest welke methode ze gebruiken en stuurt het naar de controller.
