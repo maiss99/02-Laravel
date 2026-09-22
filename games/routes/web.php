@@ -4,9 +4,18 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GameController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('games', [App\Http\Controllers\GameController::class, 'index']);
-Route::get('games/create', [App\Http\Controllers\GameController::class, 'create']);
-Route::post('games/store', [App\Http\Controllers\GameController::class, 'store']);
+// Iedereen mag de games bekijken
+Route::get('/games', [GameController::class, 'index']);
+
+// Alleen ingelogde gebruikers mogen games toevoegen, bewerken en verwijderen
+Route::middleware('auth')->group(function () {
+    Route::get('/games/create', [GameController::class, 'create']);
+    Route::post('/games/store', [GameController::class, 'store']);
+
+    Route::get('/games/edit/{id}', [GameController::class, 'edit']);
+    Route::post('/games/update/{id}', [GameController::class, 'update']);
+    Route::post('/games/destroy/{id}', [GameController::class, 'destroy']);
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Iedereen mag een game bekijken
 Route::get('/games/{id}', [GameController::class, 'show']);
 
 Route::get('/geheim', function () {
@@ -29,7 +39,3 @@ Route::get('/geheim', function () {
 })->middleware('auth');
 
 require __DIR__.'/auth.php';
-
-
-
-
