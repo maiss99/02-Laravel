@@ -1,0 +1,9 @@
+Les 9 - Mini challenge
+
+
+
+
+Als je op show klikt gebeurt het volgende:
+
+
+Laravel krijgt het binnen door de route en dan stuurt die dat naar de show functie daarna zoekt de controller de goede game met die {id} en dan stuurt de controller alle gegevens van de show  naar de view zodat de gebruiker het ziet en dan via show.blade bestand zie je die gegevens dus.

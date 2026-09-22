@@ -1,0 +1,9 @@
+Les 1 - Debugbar
+
+
+
+1. Een package is een  hulpmiddel die je kan installeren waarmee je coderen simpeler maakt, stel je maakt vaak tabellen kan je een package installeren die doormiddel van een tool het jou simpel laat maken.
+
+2. De debugbar staat onder require-dev omdat het valt onder de developer permissions, als het onder visitor zou zijn zouden de klanten de debugbar ook kunnen zien en dat is niet handig.
+
+3. Een voordeel van composer is waneer je packages wilt installeren kan dat heel simpel je hoeft niet veel dingen te doen je kan gewoon 1 ding typen
