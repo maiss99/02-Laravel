@@ -4,6 +4,8 @@
 
 @section('content')
 
+
+
     <a href="/games/create" class="btn btn-success mb-3">🎮 Add Game</a>
 
     <table class="table">
@@ -15,8 +17,10 @@
                 <th>Genre</th>
                 <th>Rating</th>
                 <th>Show</th>
+                @role('admin')
                 <th>Edit</th>
                 <th>Delete</th>
+                @endrole
             </tr>
         </thead>
 
@@ -36,13 +40,14 @@
                          Show
                         </a>
                     </td>
-
+                    @can('product aanpassen')
                     <td>
                         <a href="/games/edit/{{ $game->id }}" class="btn btn-primary btn-sm">
                             Edit
                         </a>
                     </td>
-
+                    @endcan
+                    @can('product verwijderen')
                     <td>
                         <form action="/games/destroy/{{ $game->id }}" method="post">
                             @csrf
@@ -53,6 +58,7 @@
                             </button>
                         </form>
                     </td>
+                    @endcan
                 </tr>
             @endforeach
         </tbody>
