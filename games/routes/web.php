@@ -24,6 +24,10 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/games/{id}', [GameController::class, 'show']);
 
+Route::get('/geheim', function () {
+    return view('geheim');
+})->middleware('auth');
+
 require __DIR__.'/auth.php';
 
 
