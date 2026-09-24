@@ -1,0 +1,5 @@
+Notitie Les 8
+
+
+
+Het werkt soort van, alles werkt behalve het feit dat je via de link als klant wel dingen kan bewerken (/games/create) etc.

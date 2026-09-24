@@ -5,9 +5,9 @@
 @section('content')
 
 
-
+@role('admin')
     <a href="/games/create" class="btn btn-success mb-3">🎮 Add Game</a>
-
+@endrole
     <table class="table">
         <thead class="thead-dark">
             <tr>

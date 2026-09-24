@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/games', [GameController::class, 'index']);
 
 // Alleen ingelogde gebruikers mogen games toevoegen, bewerken en verwijderen
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/games/create', [GameController::class, 'create']);
     Route::post('/games/store', [GameController::class, 'store']);
 
@@ -37,6 +37,6 @@ Route::get('/games/{id}', [GameController::class, 'show']);
 
 Route::get('/geheim', function () {
     return view('geheim');
-})->middleware('auth');
+})->middleware(['auth']);
 
 require __DIR__.'/auth.php';
